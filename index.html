@@ -322,6 +322,64 @@
             font-family: 'Nunito', sans-serif;
             margin-left: 0.5rem;
         }
+		
+/* Tabsheet filter ala restoran mewah */
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #5a5a5a;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn span {
+    font-size: 1.2rem;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    background: linear-gradient(to top, rgba(255,95,36,0.05), transparent);
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    .tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+    .tab-btn span {
+        font-size: 1rem;
+    }
+}		
         
         /* MODAL */
         .modal {
@@ -690,16 +748,25 @@
         <h5 class="section-title ff-secondary text-center gold-text fw-normal">CULINARY SELECTION</h5>
         <h1 class="mb-3">Art on a Plate</h1>
         <!-- Filter Kategori -->
-        <div class="filter-section">
-            <label>Filter Kategori: </label>
-            <select id="categoryFilter">
-                <option value="all">Semua</option>
-                <option value="Sate">Sate</option>
-                <option value="Gulai">Gulai</option>
-                <option value="Tongseng">Tongseng</option>
-                <option value="Tengkleng">Tengkleng</option>
-            </select>
-        </div>
+<div class="filter-section">
+    <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-category="all">
+            <span>🍽️</span> Semua
+        </button>
+        <button class="tab-btn" data-category="Sate">
+            <span>🍢</span> Sate
+        </button>
+        <button class="tab-btn" data-category="Gulai">
+            <span>🥘</span> Gulai
+        </button>
+        <button class="tab-btn" data-category="Tongseng">
+            <span>🍲</span> Tongseng
+        </button>
+        <button class="tab-btn" data-category="Tengkleng">
+            <span>🍖</span> Tengkleng
+        </button>
+    </div>
+</div>
         <!-- Tempat produk dinamis -->
         <div id="productContainer" class="row g-4">
             <p>Memuat menu spesial...</p>
@@ -1156,13 +1223,24 @@
         document.querySelector('.close-history')?.addEventListener('click', closeHistoryModal);
         document.getElementById('clearHistoryBtn')?.addEventListener('click', clearHistory);
         document.getElementById('showHistoryBtn')?.addEventListener('click', openHistoryModal);
-        const filterSelect = document.getElementById('categoryFilter');
-        if (filterSelect) {
-            filterSelect.addEventListener('change', (e) => {
-                currentFilter = e.target.value;
-                displayProducts();
-            });
-        }
+
+// Event listener untuk tab filter kategori
+const tabBtns = document.querySelectorAll('.tab-btn');
+if (tabBtns.length) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Hapus class active dari semua tab
+            tabBtns.forEach(b => b.classList.remove('active'));
+            // Tambah class active ke tab yang diklik
+            this.classList.add('active');
+            // Ambil nilai kategori dari atribut data-category
+            const category = this.getAttribute('data-category');
+            currentFilter = category;
+            displayProducts(); // Tampilkan ulang produk
+        });
+    });
+}
+
         window.addEventListener('click', (e) => {
             if (e.target === document.getElementById('quantityModal')) closeModal();
             if (e.target === document.getElementById('historyModal')) closeHistoryModal();
