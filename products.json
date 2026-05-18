@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sate Kambing",
+            "category": "Sate",
+            "price": 35000,
+            "image": "img/sate-kambing.png"
+        },
+        {
+            "id": 2,
+            "name": "Sate Klatak",
+            "category": "Sate",
+            "price": 25000,
+            "image": "img/sate-klatak.png"
+        },
+        {
+            "id": 3,
+            "name": "Kaki Kambing",
+            "category": "Kikil",
+            "price": 45000,
+            "image": "img/kaki-kambing.png"
+        },
+        {
+            "id": 4,
+            "name": "Tengkleng Kambing",
+            "category": "Tengkleng",
+            "price": 15000,
+            "image": "img/tengkleng-kambing.png"
+        },
+        {
+            "id": 5,
+            "name": "Gulai Kambing",
+            "category": "Gulai",
+            "price": 15000,
+            "image": "img/gulai-kambing.png"
+        },
+        {
+            "id": 6,
+            "name": "Tongseng Kambing",
+            "category": "Tongseng",
+            "price": 15000,
+            "image": "img/tongseng-kambing.png"
+        }		
+    ]
+}
