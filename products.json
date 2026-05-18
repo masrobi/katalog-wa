@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sate Kambing",
+            "category": "Sate",
+            "price": 35000,
+            "image": "https://picsum.photos/id/106/300/200"
+        },
+        {
+            "id": 2,
+            "name": "Sate Klatak",
+            "category": "Sate",
+            "price": 25000,
+            "image": "https://picsum.photos/id/127/300/200"
+        },
+        {
+            "id": 3,
+            "name": "Sate Hati Kambing",
+            "category": "Sate",
+            "price": 45000,
+            "image": "https://picsum.photos/id/130/300/200"
+        },
+        {
+            "id": 4,
+            "name": "Tengkleng Kambing",
+            "category": "Tengkleng",
+            "price": 15000,
+            "image": "https://picsum.photos/id/132/300/200"
+        },
+        {
+            "id": 5,
+            "name": "Gulai Kambing",
+            "category": "Gulai",
+            "price": 15000,
+            "image": "https://picsum.photos/id/134/300/200"
+        },
+        {
+            "id": 6,
+            "name": "Tongseng Kambing",
+            "category": "Tongseng",
+            "price": 15000,
+            "image": "https://picsum.photos/id/135/300/200"
+        }		
+    ]
+}
