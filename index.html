@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - Sesi 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍰 Katalog Produk</h1>
+        <p class="subtitle">Data dari JavaScript (dinamis)</p>
+
+		<!-- Filter Kategori -->
+		<div class="filter-section">
+			<label>Filter Kategori: </label>
+			<select id="categoryFilter">
+				<option value="all">Semua</option>
+				<option value="Kue">Kue</option>
+				<option value="Makanan Berat">Makanan Berat</option>
+			</select>
+		</div>  
+		<!-- Tempat produk akan dimasukkan oleh JavaScript -->
+        <div id="productContainer" class="product-grid">
+            <p>Memuat data...</p>
+        </div>
+		
+		<button id="showHistoryBtn" style="margin: 10px auto; display: block; background: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">📋 Riwayat Pesanan Saya</button>		
+    </div>
+
+    <!-- JavaScript ditempatkan di akhir body -->
+    <script src="script.js"></script>
+<!-- Modal untuk input quantity -->
+<div id="quantityModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modal-product-name"></h3>
+        
+        <label>Jumlah (Quantity):</label>
+        <input type="number" id="modal-quantity" min="1" value="1">
+        
+        <label>Catatan (opsional):</label>
+        <textarea id="modal-note" rows="2" placeholder="Contoh: no pedas, tambah sambal..."></textarea>
+        
+        <p id="modal-total" style="font-weight: bold; margin: 15px 0;"></p>
+        
+        <button id="sendWaBtn">📱 Kirim ke WhatsApp</button>
+    </div>
+</div>
+<!-- Modal Riwayat Pesanan -->
+<div id="historyModal" class="modal" style="display:none;">
+    <div class="modal-content" style="max-width: 500px;">
+        <span class="close-history">&times;</span>
+        <h3>📋 Riwayat Pesanan Saya</h3>
+        <div id="historyList" style="max-height: 400px; overflow-y: auto;">
+            <p style="color: #888; text-align: center;">Belum ada pesanan</p>
+        </div>
+        <button id="clearHistoryBtn" style="background: #e74c3c; color: white; border: none; padding: 8px; border-radius: 5px; margin-top: 10px; width: 100%; cursor: pointer;">🗑️ Hapus Semua Riwayat</button>
+    </div>
+</div>
+</body>
+</html>

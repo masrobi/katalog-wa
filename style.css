@@ -1,0 +1,225 @@
+/* Reset dasar biar tampilan rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Grid untuk menata card produk */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card produk */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gambar produk */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Area teks dalam card */
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-category {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+/* Tombol pesan */
+.btn-order {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-order:hover {
+    background-color: #128C7E;
+}
+
+/* Modal (pop-up) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input, 
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content textarea {
+    resize: vertical;
+}
+
+#sendWaBtn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#sendWaBtn:hover {
+    background-color: #128C7E;
+}
+
+#modal-total {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.filter-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-section select {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
+}
+
+/* Style untuk item riwayat pesanan */
+.history-item {
+    background: #f9f9f9;
+    border-left: 4px solid #25D366;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.history-item .history-date {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.history-item .history-product {
+    font-weight: bold;
+}
+
+.history-item .history-total {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.history-empty {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
