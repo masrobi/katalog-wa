@@ -21,6 +21,8 @@ body {
     background-color: var(--cream-bg);
     color: var(--text-dark);
     overflow-x: hidden;
+    font-size: 16px; /* Tambahkan ini */
+    line-height: 1.5; /* Tambahkan ini */	
 }
 
 /* TYPOGRAPHY */
@@ -805,22 +807,27 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
 
 /* ========== RESPONSIVE UNTUK HP ========== */
 @media (max-width: 768px) {
+    /* Body */
+    body {
+        font-size: 18px;
+    }
+    
     /* Perbaiki Navbar untuk HP */
     .luxury-navbar {
-        padding: 0.5rem 1rem;
+        padding: 0.8rem 1rem;
     }
     
     .navbar-brand {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .navbar-brand i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .nav-link {
         margin: 0.5rem 0;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         padding: 0.5rem;
         text-align: center;
     }
@@ -831,86 +838,132 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
         width: 100%;
         text-align: center;
         margin-top: 0.5rem;
-    }
-    
-    /* Tombol floating (Riwayat & Back to Top) */
-    #showHistoryBtn {
-        bottom: 20px !important;
-        right: 20px !important;
-        left: auto !important;
-        padding: 8px 14px !important;
-        font-size: 0.75rem !important;
-        border-radius: 30px !important;
-    }
-    
-    .back-to-top {
-        bottom: 85px !important;  /* Naikkan di atas tombol riwayat */
-        right: 20px !important;
-        left: auto !important;
-        width: 40px !important;
-        height: 40px !important;
+        padding: 10px;
+        font-size: 0.9rem;
     }
     
     /* Hero section HP */
     .hero-heading {
-        font-size: 1.8rem !important;
+        font-size: 2.2rem !important;
     }
     
     .hero-tagline {
-        font-size: 0.8rem !important;
+        font-size: 1rem !important;
+        line-height: 1.5;
+    }
+    
+    .hero-tagline br {
+        display: none;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
     }
     
     /* Section title */
     .section-title {
-        font-size: 1.2rem !important;
+        font-size: 1.5rem !important;
     }
     
-    .section-title::before,
-    .section-title::after {
-        width: 20px !important;
-        left: -30px !important;
-        right: -30px !important;
+    .section-subhead {
+        font-size: 0.9rem;
+    }
+    
+    /* Section headings */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2, .section-title {
+        font-size: 1.5rem;
     }
     
     /* Service cards */
     .service-card {
-        padding: 1rem !important;
+        padding: 1.5rem !important;
     }
     
     .service-card i {
-        font-size: 2rem !important;
+        font-size: 2.5rem !important;
     }
     
     .service-card h5 {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
     }
     
     .service-card p {
-        font-size: 0.7rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* About section */
+    .about-description {
+        font-size: 0.95rem;
     }
     
     /* Product cards */
     .product-card {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .product-title {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .product-category {
+        font-size: 0.75rem;
     }
     
     .product-price {
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
     
     .btn-order {
-        padding: 0.4rem !important;
-        font-size: 0.7rem !important;
+        padding: 0.6rem !important;
+        font-size: 0.85rem !important;
     }
     
     /* Tabs filter */
+    .category-tabs {
+        gap: 0.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
     .tab-btn {
-        padding: 0.4rem 0.8rem !important;
-        font-size: 0.6rem !important;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .tab-btn span {
+        font-size: 0.9rem;
+    }
+    
+    /* Reservation Form */
+    .form-floating label {
+        font-size: 0.85rem;
+    }
+    
+    .form-control, .form-select {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    
+    /* Team cards */
+    .team-card h5 {
+        font-size: 1rem;
+    }
+    
+    .team-card small {
+        font-size: 0.8rem;
+    }
+    
+    /* Testimonials */
+    .testimonial-card-light p {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-card-light h5 {
+        font-size: 0.95rem;
     }
     
     /* Footer */
@@ -918,18 +971,28 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
         text-align: center;
     }
     
+    .footer h4 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    
     .footer .btn-link {
         text-align: center;
         display: inline-block;
         margin: 0 8px;
+        font-size: 0.85rem;
     }
     
-    .footer .btn-link::before {
-        display: none;
+    .footer p {
+        font-size: 0.85rem;
+    }
+    
+    .footer .copyright {
+        font-size: 0.75rem;
     }
     
     .footer .footer-menu a {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         margin-right: 10px;
         padding-right: 10px;
     }
@@ -937,30 +1000,64 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     /* Modal untuk HP */
     .modal-content {
         width: 95%;
-        margin: 10px;
+        max-width: 400px;
+        margin: 10px auto;
     }
     
     .modal-header h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .modal-body {
-        padding: 15px;
+        padding: 18px;
+    }
+    
+    .modal-body label {
+        font-size: 0.75rem;
+        margin-top: 12px;
+    }
+    
+    .product-display-box strong {
+        font-size: 0.95rem;
     }
     
     .quantity-btn {
-        width: 32px;
-        height: 32px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+    
+    .quantity-input {
         font-size: 1rem;
     }
     
+    .modal-body textarea {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    
     .total-amount {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .btn-send {
-        padding: 8px;
-        font-size: 0.75rem;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+    
+    /* Tombol floating */
+    #showHistoryBtn {
+        bottom: 20px !important;
+        right: 20px !important;
+        padding: 10px 16px !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .back-to-top {
+        bottom: 75px !important;
+        width: 40px !important;
+        height: 40px !important;
     }
 }
+
 html { scroll-behavior: smooth; }
