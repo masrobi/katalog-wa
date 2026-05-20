@@ -803,10 +803,164 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     transform: translateY(-3px);
 }
 
+/* ========== RESPONSIVE UNTUK HP ========== */
 @media (max-width: 768px) {
-    .hero-heading { font-size: 2.5rem; }
-    .section-title { font-size: 1.8rem; }
+    /* Perbaiki Navbar untuk HP */
+    .luxury-navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand i {
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        margin: 0.5rem 0;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    
+    /* Tombol Reservasi di navbar */
+    .navbar .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    /* Tombol floating (Riwayat & Back to Top) */
+    #showHistoryBtn {
+        bottom: 20px !important;
+        right: 20px !important;
+        left: auto !important;
+        padding: 8px 14px !important;
+        font-size: 0.75rem !important;
+        border-radius: 30px !important;
+    }
+    
+    .back-to-top {
+        bottom: 85px !important;  /* Naikkan di atas tombol riwayat */
+        right: 20px !important;
+        left: auto !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    /* Hero section HP */
+    .hero-heading {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-tagline {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Section title */
+    .section-title {
+        font-size: 1.2rem !important;
+    }
+    
     .section-title::before,
-    .section-title::after { width: 25px; left: -35px; right: -35px; }
+    .section-title::after {
+        width: 20px !important;
+        left: -30px !important;
+        right: -30px !important;
+    }
+    
+    /* Service cards */
+    .service-card {
+        padding: 1rem !important;
+    }
+    
+    .service-card i {
+        font-size: 2rem !important;
+    }
+    
+    .service-card h5 {
+        font-size: 0.9rem !important;
+    }
+    
+    .service-card p {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Product cards */
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    .product-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .product-price {
+        font-size: 1rem !important;
+    }
+    
+    .btn-order {
+        padding: 0.4rem !important;
+        font-size: 0.7rem !important;
+    }
+    
+    /* Tabs filter */
+    .tab-btn {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.6rem !important;
+    }
+    
+    /* Footer */
+    .footer {
+        text-align: center;
+    }
+    
+    .footer .btn-link {
+        text-align: center;
+        display: inline-block;
+        margin: 0 8px;
+    }
+    
+    .footer .btn-link::before {
+        display: none;
+    }
+    
+    .footer .footer-menu a {
+        font-size: 0.7rem;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Modal untuk HP */
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .modal-header h3 {
+        font-size: 1rem;
+    }
+    
+    .modal-body {
+        padding: 15px;
+    }
+    
+    .quantity-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    .total-amount {
+        font-size: 1.2rem;
+    }
+    
+    .btn-send {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
 }
 html { scroll-behavior: smooth; }
