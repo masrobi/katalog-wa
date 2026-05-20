@@ -952,7 +952,7 @@ section[id] {
     /* ========== PERBAIKAN LABEL "WARISAN MASAKAN KHAS JAWA" ========== */
     /* Ukuran font lebih besar agar terlihat jelas */
     .section-subhead {
-        font-size: 0.75rem !important;
+        font-size: 0.85rem !important;
         letter-spacing: 2px !important;
         white-space: normal !important;
         word-break: normal !important;
