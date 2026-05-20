@@ -999,7 +999,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     
     /* Modal untuk HP */
     .modal-content {
-        width: 90%;
+        width: 85%;
         max-width: 400px;
         margin: 10px auto;
     }
