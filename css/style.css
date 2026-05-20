@@ -21,8 +21,16 @@ body {
     background-color: var(--cream-bg);
     color: var(--text-dark);
     overflow-x: hidden;
-    font-size: 16px; /* Tambahkan ini */
-    line-height: 1.5; /* Tambahkan ini */	
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        padding-top: 60px;
+    }
 }
 
 /* TYPOGRAPHY */
@@ -112,21 +120,44 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     border-color: var(--primary);
 }
 
-/* DARK NAVBAR */
+/* ========== NAVBAR FIXED YANG KOKOH ========== */
 .luxury-navbar {
     background: rgba(15, 23, 43, 0.96);
     backdrop-filter: blur(14px);
     padding: 0.8rem 2rem;
     border-bottom: 1px solid rgba(255,95,36,0.3);
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: all 0.3s ease;
 }
+
+.luxury-navbar .container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* Navbar Brand */
 .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.navbar-brand .brand-text {
     font-family: 'Pacifico', cursive;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.3rem;
     color: var(--primary) !important;
 }
-.navbar-brand i { margin-right: 8px; color: var(--primary); }
+
+.navbar-brand i { 
+    color: var(--primary); 
+}
+
 .nav-link {
     font-family: 'Nunito', sans-serif;
     color: var(--light) !important;
@@ -146,7 +177,10 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     background-position: center;
     display: flex;
     align-items: center;
+    margin-top: 0;
+    padding-top: 80px;
 }
+
 .hero-heading {
     font-size: 4rem;
     line-height: 1.2;
@@ -340,19 +374,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     background: linear-gradient(to top, rgba(255,95,36,0.05), transparent);
 }
 
-/* Responsive untuk mobile */
-@media (max-width: 768px) {
-    .tab-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.75rem;
-        gap: 4px;
-    }
-    .tab-btn span {
-        font-size: 1rem;
-    }
-}
-
-/* ========== MODAL MODERN & ELEGAN (UKURAN KECIL UNTUK HP) ========== */
+/* ========== MODAL MODERN & ELEGAN ========== */
 .modal {
     position: fixed;
     top: 0;
@@ -400,7 +422,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     }
 }
 
-/* Header Modal lebih kompak */
+/* Header Modal */
 .modal-header {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     padding: 14px 20px;
@@ -428,13 +450,13 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     position: absolute;
     top: 12px;
     right: 16px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
     color: white;
     transition: all 0.2s ease;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -448,12 +470,22 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     transform: rotate(90deg);
 }
 
-.close:hover {
-    background: rgba(255,255,255,0.3);
+/* Tombol Close Button (button element) */
+.close-btn, .close-history-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.close-btn:hover, .close-history-btn:hover {
+    background: rgba(255,255,255,0.4) !important;
     transform: rotate(90deg);
 }
 
-/* Body Modal lebih padat */
+/* Body Modal */
 .modal-body {
     padding: 18px 20px 22px;
 }
@@ -491,7 +523,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Quantity Wrapper lebih kecil */
+/* Quantity Wrapper */
 .quantity-wrapper {
     display: flex;
     align-items: center;
@@ -531,7 +563,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Textarea lebih kecil */
+/* Textarea */
 .modal-body textarea {
     width: 100%;
     padding: 10px 12px;
@@ -549,7 +581,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     box-shadow: 0 0 0 3px rgba(255, 95, 36, 0.2);
 }
 
-/* Total Harga lebih kompak */
+/* Total Harga */
 .modal-total {
     background: linear-gradient(135deg, #fff8f0, #fff0e6);
     padding: 10px 12px;
@@ -575,7 +607,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Tombol Kirim lebih kecil */
+/* Tombol Kirim */
 .btn-send {
     background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
@@ -776,6 +808,7 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     color: var(--primary);
 }
 
+/* Tombol Back to Top */
 .back-to-top {
     position: fixed;
     bottom: 85px;
@@ -805,27 +838,32 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     transform: translateY(-3px);
 }
 
-/* ========== RESPONSIVE UNTUK HP ========== */
+/* Section Scroll Margin */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 @media (max-width: 768px) {
-    /* Perbaiki Navbar untuk HP */
+    section[id] {
+        scroll-margin-top: 70px;
+    }
+}
+
+/* ========== RESPONSIVE UNTUK HP (FONT LEBIH BESAR & NAVBAR RAPI) ========== */
+@media (max-width: 768px) {
+    /* Perbaiki Navbar */
     .luxury-navbar {
         padding: 0.5rem 0.8rem;
     }
     
-    .navbar-brand {
-        font-size: 1.1rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 60%;
+    .navbar-brand .brand-text {
+        font-size: 0.9rem;
     }
     
     .navbar-brand i {
-        font-size: 1rem;
-        margin-right: 5px;
+        font-size: 0.9rem;
     }
     
-    /* Tombol toggle navbar (hamburger menu) */
     .navbar-toggler {
         padding: 0.25rem 0.5rem;
         font-size: 1rem;
@@ -836,50 +874,34 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
         height: 1.2rem;
     }
     
+    .navbar-collapse {
+        background: rgba(15, 23, 43, 0.98);
+        backdrop-filter: blur(14px);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
     .nav-link {
         margin: 0.3rem 0;
         font-size: 0.85rem;
-        padding: 0.5rem;
+        padding: 8px 0;
         text-align: left;
     }
     
-    /* Tombol Reservasi di navbar */
     .navbar .btn-primary {
-        display: inline-block;
-        width: auto;
+        margin-top: 10px;
+        width: 100%;
         text-align: center;
-        margin-top: 0;
-        margin-left: auto;
-        padding: 6px 12px;
-        font-size: 0.75rem;
     }
     
-    /* Container navbar */
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
+    /* Hero section */
+    .hero-luxury {
+        padding-top: 70px;
     }
-}
-
-/* Navbar Brand */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.navbar-brand .brand-text {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .navbar-brand .brand-text {
-        font-size: 0.9rem;
-    }
-}
     
-    /* Hero section HP */
     .hero-heading {
         font-size: 2.2rem !important;
     }
@@ -894,26 +916,21 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     }
     
     .btn {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 10px 20px;
     }
     
     /* Section title */
     .section-title {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
     }
     
     .section-subhead {
         font-size: 0.9rem;
     }
     
-    /* Section headings */
     h1 {
         font-size: 1.8rem;
-    }
-    
-    h2, .section-title {
-        font-size: 1.5rem;
     }
     
     /* Service cards */
@@ -1020,6 +1037,10 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
         font-size: 0.85rem;
     }
     
+    .footer .btn-link::before {
+        display: none;
+    }
+    
     .footer p {
         font-size: 0.85rem;
     }
@@ -1042,15 +1063,15 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     }
     
     .modal-header h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .modal-body {
-        padding: 18px;
+        padding: 15px;
     }
     
     .modal-body label {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         margin-top: 12px;
     }
     
@@ -1088,13 +1109,33 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
         right: 20px !important;
         padding: 10px 16px !important;
         font-size: 0.8rem !important;
+        z-index: 999 !important;
     }
     
     .back-to-top {
-        bottom: 75px !important;
+        bottom: 85px !important;
+        right: 20px !important;
         width: 40px !important;
         height: 40px !important;
+        z-index: 998 !important;
     }
 }
 
-html { scroll-behavior: smooth; }
+/* ========== SCROLL BAR CUSTOM ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
