@@ -949,8 +949,16 @@ section[id] {
         margin: 0.8rem 0 !important;
     }
     
+    /* ========== PERBAIKAN LABEL "WARISAN MASAKAN KHAS JAWA" TIDAK TERPOTONG ========== */
     .section-subhead {
-        font-size: 0.7rem;
+        font-size: 0.62rem !important;
+        letter-spacing: 1.5px !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.3 !important;
     }
     
     .hero-luxury .btn {
@@ -1107,5 +1115,21 @@ section[id] {
     
     .footer .copyright {
         font-size: 0.7rem;
+    }
+}
+
+/* ========== PERBAIKAN KHUSUS UNTUK HP SANGAT KECIL (max-width: 480px) ========== */
+@media (max-width: 480px) {
+    .section-subhead {
+        font-size: 0.55rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .hero-heading {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-tagline {
+        font-size: 0.72rem !important;
     }
 }
