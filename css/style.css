@@ -421,22 +421,29 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     font-size: 1.2rem;
 }
 
-.close {
+/* Tombol Close Modal */
+.close, .close-history {
     position: absolute;
     top: 12px;
     right: 16px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: white;
     transition: all 0.2s ease;
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background: rgba(255,255,255,0.2);
+    z-index: 10;
+}
+
+.close:hover, .close-history:hover {
+    background: rgba(255,255,255,0.4);
+    transform: rotate(90deg);
 }
 
 .close:hover {
@@ -768,13 +775,33 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
 }
 
 .back-to-top {
-    position: fixed; bottom: 45px; right: 45px; background: var(--primary); color: #FFFFFF;
-    width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-    border-radius: 2px; opacity: 0; transition: 0.3s; cursor: pointer; z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: #FFFFFF;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 98;
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-.back-to-top.show { opacity: 1; display: flex; }
-.back-to-top:hover { background: var(--primary-dark); color: white; }
+.back-to-top.show { 
+    opacity: 1;
+    display: flex;
+}
+.back-to-top:hover { 
+    background: var(--primary-dark);
+    color: white;
+    transform: translateY(-3px);
+}
 
 @media (max-width: 768px) {
     .hero-heading { font-size: 2.5rem; }
