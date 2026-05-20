@@ -859,7 +859,7 @@ section[id] {
 @media (max-width: 768px) {
     /* Reset body */
     body {
-        padding-top: 60px;
+        padding-top: 70px;
         font-size: 18px;
     }
     
@@ -952,7 +952,7 @@ section[id] {
     /* ========== PERBAIKAN LABEL "WARISAN MASAKAN KHAS JAWA" ========== */
     /* Ukuran font lebih besar agar terlihat jelas */
     .section-subhead {
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
         letter-spacing: 2px !important;
         white-space: normal !important;
         word-break: normal !important;
