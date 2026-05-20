@@ -776,12 +776,12 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
 
 .back-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 85px;
     right: 20px;
     background: var(--primary);
     color: #FFFFFF;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -789,13 +789,13 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     opacity: 0;
     transition: 0.3s;
     cursor: pointer;
-    z-index: 98;
+    z-index: 998;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 .back-to-top.show { 
     opacity: 1;
-    display: flex;
+    visibility: visible;
 }
 .back-to-top:hover { 
     background: var(--primary-dark);
