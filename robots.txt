@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://masrobi.github.io/katalog-wa/sitemap.xml
