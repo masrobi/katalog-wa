@@ -807,40 +807,77 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
 
 /* ========== RESPONSIVE UNTUK HP ========== */
 @media (max-width: 768px) {
-    /* Body */
-    body {
-        font-size: 18px;
-    }
-    
     /* Perbaiki Navbar untuk HP */
     .luxury-navbar {
-        padding: 0.8rem 1rem;
+        padding: 0.5rem 0.8rem;
     }
     
     .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 60%;
     }
     
     .navbar-brand i {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+    
+    /* Tombol toggle navbar (hamburger menu) */
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.2rem;
+        height: 1.2rem;
     }
     
     .nav-link {
-        margin: 0.5rem 0;
-        font-size: 0.9rem;
+        margin: 0.3rem 0;
+        font-size: 0.85rem;
         padding: 0.5rem;
-        text-align: center;
+        text-align: left;
     }
     
     /* Tombol Reservasi di navbar */
     .navbar .btn-primary {
-        display: block;
-        width: 100%;
+        display: inline-block;
+        width: auto;
         text-align: center;
-        margin-top: 0.5rem;
-        padding: 10px;
+        margin-top: 0;
+        margin-left: auto;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    
+    /* Container navbar */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-brand .brand-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .brand-text {
         font-size: 0.9rem;
     }
+}
     
     /* Hero section HP */
     .hero-heading {
@@ -857,13 +894,13 @@ h1, h2, h3, h4, h5, h6, .hero-heading, .section-title {
     }
     
     .btn {
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 10px 20px;
     }
     
     /* Section title */
     .section-title {
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important;
     }
     
     .section-subhead {
