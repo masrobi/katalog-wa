@@ -867,7 +867,7 @@ section[id] {
 @media (max-width: 768px) {
     /* Reset body */
     body {
-        padding-top: 60px;
+        padding-top: 85px;
         font-size: 18px;
     }
     
@@ -933,9 +933,15 @@ section[id] {
     
     .hero-luxury .row {
         margin: 0 !important;
-        padding: 30px 15px !important;
+        padding: 85px 15px 30px !important;
         min-height: auto !important;
     }
+
+    .hero-luxury .section-subhead {
+        position: relative;
+        z-index: 2;
+        padding-top: 5px;
+    }    
     
     .hero-heading {
         font-size: 1.8rem !important;
